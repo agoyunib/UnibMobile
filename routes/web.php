@@ -30,12 +30,30 @@ Route::prefix('admin/dashboard')->group(function () {
     // Route::get('/deletesmtrskp/{id}', 'Admin\SemesterSkpController@deleteSmtrSkp')->name('admin.deleteSmtrSkp');
 });
 
-Route::prefix('/home')->group(function () {
-    Route::get('/', 'HomeController@index')->name('home');
-    // Route::post('/addsmtrskp', 'Admin\SemesterSkpController@addSmtrSkp')->name('admin.addSmtrskp');
-    // Route::get('/editsmtrskp', 'Admin\SemesterSkpController@editSmtrSkp')->name('admin.editSmtrskp');
-    // Route::post('/updatesmtrskp', 'Admin\SemesterSkpController@updateSmtrSkp')->name('admin.updateSmtrSkp');
-    // Route::get('/deletesmtrskp/{id}', 'Admin\SemesterSkpController@deleteSmtrSkp')->name('admin.deleteSmtrSkp');
+Route::prefix('admin/periode')->group(function () {
+    Route::get('/', 'Admin\PeriodeController@index')->name('admin.periode');
+    Route::delete('/hapus/{id}', 'Admin\PeriodeController@hapus')->name('admin.hapusperiode');
+    Route::get('/ubah/{id}', 'Admin\PeriodeController@ubah')->name('admin.ubahperiode');
+    Route::post('/update','Admin\PeriodeController@update')->name('admin.updateperiode');
+    Route::get('/tambah','Admin\PeriodeController@tambah')->name('admin.tambahperiode');
+    Route::post('/simpan','Admin\PeriodeController@store')->name('admin.simpanperiode');
+});
+
+Route::prefix('admin/orangtua')->group(function () {
+    Route::get('/', 'Admin\OrangtuaController@index')->name('admin.orangtua');
+    Route::delete('/hapus/{id}', 'Admin\OrangtuaController@hapus')->name('admin.hapususer');
+    Route::get('/ubah/{id}', 'Admin\OrangtuaController@ubah')->name('admin.ubahuser');
+    Route::post('/update','Admin\OrangtuaController@update')->name('admin.updateuser');
+    Route::get('/tambah','Admin\OrangtuaController@tambah')->name('admin.tambahuser');
+    Route::post('/simpan','Admin\OrangtuaController@store')->name('admin.simpanuser');
+});
+
+Route::prefix('/orangtua')->group(function () {
+    Route::get('/dashboard', 'DashboardOrangTuaController@index')->name('orangtua.dashboard');
+    Route::get('/mata_kuliah', 'MataKuliahController@index')->name('orangtua.mata_kuliah');
+    Route::post('/mata_kuliah/get_semester', 'MataKuliahController@getSemester')->name('orangtua.matakuliah.get_periode');
+    Route::get('/presensi', 'PresensiOrangtuaController@index')->name('orangtua.presensi');
+    Route::post('/presensi/get_semester', 'PresensiOrangtuaController@getSemester')->name('orangtua.presensi.get_periode');
 });
 Route::prefix('admin/presensi')->group(function () {
     Route::get('/', 'Admin\PresensiController@cariReviewer')->name('admin.presensi');

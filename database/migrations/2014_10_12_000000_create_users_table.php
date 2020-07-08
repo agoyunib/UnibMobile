@@ -22,8 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('status', ['true', 'false']);
             $table->string('nm_fakultas')->nullable();
-            $table->string('id_fakultas')->nullable();
-            $table->string('id_prodi')->nullable();
             $table->string('nm_prodi')->nullable();
             $table->timestamps();
         });

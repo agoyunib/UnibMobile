@@ -78,7 +78,6 @@
     <link href="{{ asset('assets/backend/css/demo1/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/backend/css/demo1/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="{{ asset('assets/logo/logo_unib.png') }}" />
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     @stack('styles')
 </head>
 
@@ -87,6 +86,7 @@
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
         <div class="kt-header-mobile__logo">
             <a href="demo1/index.html">
+                <img alt="Logo" src="{{ asset('assets/logo/sibansari-mobile.png') }}" />
             </a>
         </div>
         <div class="kt-header-mobile__toolbar">
@@ -103,8 +103,8 @@
                 id="kt_aside">
                 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                     <div class="kt-aside__brand-logo">
-                        <a href="{{ route('admin.dashboard') }}" class="text-white text-uppercase" style="text-align: center; cursor: pointer; font-size:20px;">
-                           <img src="{{ asset('assets/logo/logo_unib.png') }}" style="width: 30px;" alt=""> Unib Mobile
+                        <a href="demo1/index.html">
+                            <img alt="Logo" src="{{ asset('assets/logo/sibansari.png') }}" />
                         </a>
                     </div>
                     <div class="kt-aside__brand-tools">
@@ -303,7 +303,6 @@
     <script src="{{ asset('assets/backend/js/demo1/scripts.bundle.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/backend/vendors/custom/fullcalendar/fullcalendar.bundle.js') }}"
         type="text/javascript"></script>
-    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     {{-- <script src="{{ asset('assets/backend/js/demo1/pages/dashboard.js') }}" type="text/javascript"></script> --}}
     @stack('scripts')
 </body>

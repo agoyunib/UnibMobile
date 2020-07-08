@@ -10,20 +10,20 @@
                     <span class="kt-menu__link-text">Dashboard</span>
                 </a>
             </li>
-            <li class="kt-menu__item mb-3  {{ set_active('admin.presensi') }}" aria-haspopup="true">
-                <a href="{{ route('admin.presensi') }}" class="kt-menu__link ">
+            <li class="kt-menu__item mb-3  {{ set_active('admin.periode') }}" aria-haspopup="true">
+                <a href="{{ route('admin.periode') }}" class="kt-menu__link ">
                     <span class="kt-menu__link-icon">
                         <i class="fa fa-home"></i>
                     </span>
-                    <span class="kt-menu__link-text">Data Presensi</span>
+                    <span class="kt-menu__link-text">Managemen Periode</span>
                 </a>
             </li>
-            <li class="kt-menu__item mb-3" aria-haspopup="true">
-                <a href="#" class="kt-menu__link ">
+            <li class="kt-menu__item mb-3  {{ set_active('admin.orangtua') }}" aria-haspopup="true">
+                <a href="{{ route('admin.orangtua') }}" class="kt-menu__link ">
                     <span class="kt-menu__link-icon">
                         <i class="fa fa-home"></i>
                     </span>
-                    <span class="kt-menu__link-text">Manajemen Data Fakultas</span>
+                    <span class="kt-menu__link-text">Managemen Akun Orang Tua</span>
                 </a>
             </li>
             <li class="kt-menu__item mb-3" aria-haspopup="true">
